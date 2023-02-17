@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+slab+One and display=swap');
+html {
+    background:#1084d6 url(http://unsplash.it/1500/1000?image=881&blur=50);
+    background-size:cover;
+    font-family:'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+  }
+
+  body {
+    margin: 0;
+    font-size: 2rem;
+    display:flex;
+    flex:1;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .clock {
+    width: 30rem;
+    height: 30rem;
+    border:20px solid white;
+    border-radius:50%;
+    margin:50px auto;
+    position: relative;
+    padding:2rem;
+    box-shadow:
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 3px #EFEFEF,
+      inset 0 0 10px black,
+      0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
+
+  .hand {
+    width:50%;
+    height:6px;
+    background:black;
+    position: absolute;
+    top:50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  .create {
+
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 50px;
+    font-size: larger;
+  }
+.container {
+  position: relative;
+  -webkit-box-reflect:below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+  margin-right: 150px;
+}
+.container span {
+  position: relative;
+  /* font-family: "alfa Slab One", cursive; */
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+animation: wave 1s infinite;
+animation-delay: calc(.1s * var(--i));
+}
+@keyframes wave {
+  0%,40%,100% {
+ transform: translateY(0)
+  }
+  20% {
+    transform:translateY(-20)
+  }
+}
+
